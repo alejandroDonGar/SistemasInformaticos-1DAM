@@ -1,0 +1,76 @@
+﻿Actividad 1.1 - Comando básicos 1
+
+
+1) Explique todas las formas diferentes que conozca para ir a la carpeta home del usuario logueado.
+* Si estamos en algún directorio, haciendo  cd ..  hasta llegar a  home/dam/- 
+* También se puede hacer  cd  únicamente.
+
+
+2) Cree en la carpeta home de su usuario (recuerde que la carpeta /home/usuario ya está creada y es la carpeta principal de cada usuario) las siguientes carpetas prueba/test/febrero/estoy/aprendiendo con 1 solo comando, recuerde los parámetros de los comandos o búsquelos con --help o con man. 
+* mkdir -p   prueba/test/febrero/estoy/aprendiendo
+
+
+3) Cree un enlace simbólico en su carpeta de usuario directamente a la carpeta estoy y llámelo link2estoy.
+* ln -s   prueba/test/febrero/estoy/   link2estoy
+
+
+4) Cree la carpeta aprendiendo2 dentro de la carpeta anteriormente creada estoy de la forma en que le sea más cómodo.
+* cd link2estoy
+* mkdir aprendiendo2
+
+
+5) Cree tres archivos vacíos en la carpeta aprendiendo llamados:
+* touch a.txt
+* touch b.txt
+* touch c.txt
+
+
+6) En el campus virtual en la carpeta de recursos hay dos archivos de texto, .txt, players.txt y nombres_desordenados.txt, descárgalos y muévalos a la carpeta febrero.
+* mv nombres_desordenados.txt   prueba/test/febrero/
+* mv players.txt   prueba/test/febrero/
+
+
+7) Si no lo está, vaya a la carpeta home de su usuario nuevamente (/home/user) y utilice un comando para ver en forma de "árbol" el listado de directorios recientemente creado.
+* tree prueba/
+
+
+8) Sería capaz de encontrar la forma (usando la ayuda del comando anterior: man o --help) para hacer lo mismo pero que en el listado tipo árbol pueda ver lo que ocupa cada carpeta? y los permisos? y todo a la vez?
+* tree prueba/ ls -lh
+
+
+9) Haga una búsqueda de todos los archivos con extensión .txt en su carpeta de usuario. Recuerde que si ya está en la carpeta de usuario la forma más rápida de indicar el directorio actual es hacer uso del punto.
+* find . -type f -name “*.txt” 
+
+
+10) Busque todos los enlaces simbólicos.
+* find . -type l
+
+
+11) Haga una búsqueda de todos los archivos que hayan sido modificados en los últimos 15 minutos.
+* find . -type f - mmin -15
+
+
+12) ¿Cómo podría guardar el resultado de la búsqueda anterior en un fichero llamado resultado.log? Recordatorio. Uso de Pipes.
+* find . -type f -mmin -15 > resultado.log
+
+
+13) Busque todos los archivos que empiecen por la letra "a" indiferentemente de si es mayúscula o minúscula.
+* find . -iname “a*”
+
+
+14) Muestre en pantalla en contenido de todos los archivos de texto (.txt)
+* find . -name “*.txt” -exec cat {} +
+
+
+15) Busque todos los archivos vacíos.
+* find . -type f -empty
+
+
+16) Busque todos los archivos vacíos .txt y bórralos en un solo comando.  OJO   Verifique antes de ejecutar el borrado que el comando de búsqueda es correcto y devuelve los archivos que realmente se quieren borrar.
+* find . -type f - name “*.txt” -empty -exec rm {} +
+
+
+________________
+
+
+Actividad 1.1 - Comando básicos 1
