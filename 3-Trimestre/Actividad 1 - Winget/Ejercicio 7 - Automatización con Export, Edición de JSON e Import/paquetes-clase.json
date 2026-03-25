@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {
+      "source": "winget",
+      "agreements": true
+    }
+  ],
+  "packages": [
+    {
+      "packageIdentifier": "Microsoft.VisualStudioCode"
+    },
+    {
+      "packageIdentifier": "Git.Git"
+    },
+    {
+      "packageIdentifier": "Docker.DockerDesktop"
+    },
+    {
+      "packageIdentifier": "OpenJS.NodeJS"
+    },
+    {
+      "packageIdentifier": "Postman.Postman"
+    },
+    {
+      "packageIdentifier": "Microsoft.VisualStudio.2022.Community"
+    }
+  ]
+}
